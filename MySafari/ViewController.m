@@ -24,6 +24,16 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+
+    if ([[self.urlTextField.text substringToIndex:7] isEqualToString:@"http://"])
+    {
+        
+
+    } else {
+        self.urlTextField.text = [NSString stringWithFormat:@"http://%@", self.urlTextField.text];
+    }
+
+
     NSURL *url = [NSURL URLWithString:self.urlTextField.text];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
