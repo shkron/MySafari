@@ -41,5 +41,37 @@
 {
     [self.activityIndicator stopAnimating];
 }
+- (IBAction)onBackButtonPressed:(id)sender {
+
+    //something might be wrong with the back button
+    if(self.webView.canGoBack)
+    {
+    [self.webView goBack];
+    }
+    else{}
+
+
+}
+- (IBAction)onReloadButtonPressed:(id)sender {
+    [self.webView reload];
+}
+
+
+
+- (IBAction)onStopLoadingButtonPressed:(id)sender {
+    [self.activityIndicator stopAnimating];
+    [self.webView stopLoading];
+}
+
+
+- (IBAction)onForwardButtonPressed:(id)sender {
+    //something might be wrong with the forward button
+    if(self.webView.canGoForward)
+    {
+        [self.webView goForward];
+    }
+    else{}
+
+}
 
 @end
