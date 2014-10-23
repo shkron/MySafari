@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -52,7 +52,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-p1-Q6z">
                                         <rect key="frame" x="51" y="13" width="30" height="30"/>
-                                        <state key="normal" title=">">
+                                        <state key="normal" title="&gt;">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -102,8 +102,12 @@
                                     <constraint firstAttribute="height" constant="56" id="oEG-Gz-QRZ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-qh-GgS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-qh-GgS">
                                 <rect key="frame" x="16" y="29" width="288" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="bcT-vj-KoA"/>
+                                    <constraint firstAttribute="height" constant="36" id="wOE-KC-dwS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -121,6 +125,7 @@
                             <constraint firstItem="hG8-98-aZr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="jk7-Og-Ozh"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gkL-AM-eDo" secondAttribute="bottom" id="lBJ-gb-KH2"/>
                             <constraint firstItem="gkL-AM-eDo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="oeK-e2-2Jd"/>
+                            <constraint firstItem="W9I-qh-GgS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="9" id="xus-80-jEH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gkL-AM-eDo" secondAttribute="trailing" constant="-16" id="yJF-LQ-mTb"/>
                         </constraints>
                     </view>
