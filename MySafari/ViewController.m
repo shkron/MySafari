@@ -27,30 +27,21 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView.contentOffset.y < 20) {
+        [UIView animateWithDuration:.2 animations:^{
 
-    [UIView animateWithDuration:.5 animations:^{
-        self.urlTextField.alpha = 1;
-        self.urlTextField.frame = CGRectMake(self.urlTextField.frame.origin.x, -40, self.urlTextField.frame.size.width, self.urlTextField.frame.size.height);
-    }];
+            self.urlTextField.alpha = 1;
 
-//    if(scrollView.contentOffset.y <= 0) {
-//        self.urlTextField.alpha = 1;
-//        [UIView beginAnimations:nil context:NULL];
-//        [UIView setAnimationDelegate:self];
-//        [UIView setAnimationDuration:0.5];
-//        [UIView setAnimationBeginsFromCurrentState:YES];
-//        self.urlTextField.frame = CGRectMake(self.urlTextField.frame.origin.x, self.urlTextField.frame.origin.y, self.urlTextField.frame.size.width, self.urlTextField.frame.size.height);
-//        [UIView commitAnimations];
-//    } else {
-//
-//        self.urlTextField.alpha = 0.2;
-//        [UIView beginAnimations:nil context:NULL];
-//        [UIView setAnimationDelegate:self];
-//        [UIView setAnimationDuration:0.5];
-//        [UIView setAnimationBeginsFromCurrentState:YES];
-//       self.urlTextField.frame = CGRectMake(self.urlTextField.frame.origin.x, -30, self.urlTextField.frame.size.width, self.urlTextField.frame.size.height);
-//        [UIView commitAnimations];
-//    }
+            self.urlTextField.frame = CGRectMake(self.urlTextField.frame.origin.x, 108, self.urlTextField.frame.size.width, self.urlTextField.frame.size.height);
+        }];
+    } else {
+        [UIView animateWithDuration:.2 animations:^{
+
+            self.urlTextField.alpha = 0.2;
+
+            self.urlTextField.frame = CGRectMake(self.urlTextField.frame.origin.x, -30, self.urlTextField.frame.size.width, self.urlTextField.frame.size.height);
+        }];
+    }
 }
 
 
