@@ -81,12 +81,15 @@
 }
 - (IBAction)onBackButtonPressed:(id)sender {
 
-    //something might be wrong with the back button
+
     if(self.webView.canGoBack)
     {
     [self.webView goBack];
     }
-    else{}
+    else
+    {
+
+    }
 
 
 }
@@ -115,7 +118,7 @@
 
 
 - (IBAction)onForwardButtonPressed:(id)sender {
-    //something might be wrong with the forward button
+
     if(self.webView.canGoForward)
     {
         [self.webView goForward];
